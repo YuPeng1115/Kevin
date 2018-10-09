@@ -26,7 +26,7 @@ ul{
 }
 .header .tel .img{
 	position: absolute;
-    right: 135px;
+    right: 140px;
     width: 30px;
     height: 29px;
     top: 5px;
@@ -40,7 +40,7 @@ ul{
 .header .tel p{
 	position: absolute;
 	top:-5px;
-	right:0;
+	right:-55px;
 	font-size: 20px;
 	color: blue;
 }
