@@ -1,0 +1,399 @@
+/**{    /*清除页面原有样式*/
+   padding:0;    /*内边距属性为0*/
+   margin:0;     /*设置外边距为0*/
+   outline:0;    /*设置轮廓为0*/
+}*/
+body{
+	background:#fff url(../images/body.gif) repeat-x 0 0; /*设置背景颜色，图片，水平不重复图像*/
+	font-family: "Trebuchet MS", Arial, sans-serif; /*设置body页面字体样式*/
+	font-size:12px;   /*设置字体大小为12px*/
+	line-height:16px;  /*设置行间距为16px*/
+	color:#636363;     /*设置字体颜色*/
+}
+input, textarea, select { 
+	font-family: "Trebuchet MS", Arial, sans-serif; 
+	font-size:12px;
+}   /*设置表单字体样式*/
+
+.field { 
+	background:#ebebeb;    /*设置颜色*/
+	border:solid 1px #dedede; /*设置实线边框，1px，边框颜色*/
+	padding:2px;   /*内边距属性为2px*/
+}/*设置表单中单行文本框样式*/
+
+a img { 
+	border:0; 
+}/*设置超链接和图片不显示边框*/
+
+a { 
+	text-decoration: underline; /*定义文本下的一条线*/
+}/*设置超链接样式*/
+a:hover { 
+	text-decoration: none;   /*定义标准文本*/
+}
+.left, .alignleft { 
+	float:left;    /*往左浮动*/
+	display:inline;  /*设置块元素转换为行内元素*/
+}/*设置统一浮动方式和块元素转换为行内元素，以便代码中需要时使用*/
+.right, .alignright { 
+	float:right;   /*往右浮动*/
+	display:inline;  /*设置块元素转换为行内元素*/
+}
+.cl { 
+	font-size:0;   /*设置字体大小*/
+	line-height:0; /*设置行间距*/
+	clear:both;    /*设置在左右两侧均不允许浮动元素*/
+	display:block; /*设置为块元素*/
+	height:0;      /*高为0*/ 
+	}/*用于增加元素清除浮动对父元素的影响*/
+
+.al { text-align: left; }  /*设置把文本排列到左边*/
+.ar { text-align: right; } /*设置把文本排列到右边*/
+.ac { text-align: center; } /*设置把文本排列到中间*/
+
+h2 { 
+	font-size:14px; /*设置字体大小为14px*/
+	line-height:16px;   /*设置行间距为16px*/
+}
+h3 { 
+	font-size:12px;   /*设置字体大小为12px*/ 
+	line-height:14px;  /*设置行间距为14px*/
+	color:#000;        /*设置颜色*/
+}
+h4 { 
+	font-size:12px;    /*设置字体大小为12px*/ 
+	line-height:14px;  /*设置行间距为14px*/
+	color:#000;        /*设置颜色*/
+}
+.shell { 
+	width:960px;   /*设置宽为960px*/ 
+	margin:0 auto;   /*上下外边距为0，左右居中*/
+	padding:10px;    /*设置内边距为10px*/
+	background:#fff;   /*设置背景颜色*/
+}
+#header { 
+	height:64px;    /*设置高为64px*/ 
+	background-color:#FFCCCC;   /*设置背景颜色*/
+	position:relative;      /*设置生成相对定位*/
+}
+#logo { 
+	font-size:30px;  /*字体大小为30px*/ 
+	color:#000000;   /*设置颜色*/
+	line-height:20px; /*设置行高*/
+	width:156px;    /*设置宽为156px*/
+	height:64px;    /*设置高为64px*/
+	float:left;     /*设置往左浮动*/
+	text-align:center; /*定义文本排列到中间*/
+}   /*logo向左浮动*/
+.fon{
+	margin:20px auto;   /*设置上下外边距为20px，左右居中*/
+}
+#cart { 
+	float:right;   /*设置往右浮动*/
+	width:160px;   /*设置宽为160px*/
+	top:0; right:0;  /**/
+	height:51px;   /*设置高为51px*/
+	background-color:#FFCCCC;   /*设置背景颜色*/
+	color:#000000;    /*设置颜色*/
+	padding:13px 10px 0 10px;   /*设置上内边距13px，右10px，下0px，左10px*/
+	white-space:nowrap;  /*浏览器忽略空白*/
+	line-height:40px;   /*设置行高为40px*/
+}  /*购物车向右浮动*/
+a.cart-link { 
+	color:#000000;    /*设置颜色*/
+	background:url(../images/cart-link.gif) no-repeat 0 0; /*设置背景图片，图片定位，不平铺*/
+	padding:0 0 0 32px;   /*设置内边距上右下为0，左为32px*/
+	text-decoration: none;  /*定义标准的文本*/
+}
+a.cart-link:hover { 
+	text-decoration: underline;  /*定义文本下的一条线*/
+}
+#navigation { 
+	float:right;   /*往右浮动*/
+	white-space:nowrap;  /*定义文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。*/
+}/*导航向右浮动*/
+#navigation ul{ 
+	list-style-type: none;  /*设置列表无标记*/ 
+	height:64px;      /*高为64px*/
+	font-weight: bold;   /*定义粗体字符*/
+	float:left;   /*往左浮动*/
+}
+#navigation ul li{ 
+	float:left;    /*往左浮动*/
+	display:inline;   /*设置块元素转换为行内元素**/
+}
+#navigation ul li a{ 
+	float:left;    /*往左浮动*/
+	height:64px;   /*高为64px*/
+	line-height:64px;  /*设置行高为64px*/
+	text-decoration: none;  /*定义标准的文本*/
+	color:#000000;         /*设置颜色*/
+	padding:0 15px;     /*定义内边距上下为0，左右为15px*/
+}
+#navigation ul li a.active,
+#navigation ul li a:hover{ 
+	background:#fff;
+}/*悬停和单击时背景颜色是白色*/
+#main { 
+	padding:10px 0 0 0;  /*设置内边距上为10px，右下左为0*/ 
+}
+
+#sidebar { 
+	float:left;   /*往左浮动*/ 
+	width:226px;  /*宽为226px*/
+}  /*左侧内容左浮动*/
+#content { 
+	float:right;  /*往右浮动*/
+	width:724px;  /*宽为724px*/
+}   /*右侧内容右浮动*/
+
+
+.box { 
+	padding:1px;    /*设置内边距大小为1px*/ 
+	border:solid 1px #dedede;   /*设置实线边框，1px，颜色*/
+	margin-bottom:10px;   /*设置下外边距为10px*/
+}
+.box h2{ 
+	background:#7f7f7f; /*背景颜色*/
+	color:#fff;      /*字体颜色*/
+	font-weight: normal;  /*定义标准字符*/
+	padding:0 5px;      /*设置内边距大小为上下为0，左右为5px*/
+	position:relative;   /*生成相对定位*/
+	height:27px;        /*高为27px*/
+	line-height:27px;    /*行高为27px*/
+}
+.box h2 span{ 
+	position:absolute;   /*生成绝对定位*/
+	width:10px;         /*宽为10px*/
+	height:5px;         /*高为5px*/
+	background:url(../images/h2-arr.gif);/*背景图片*/ 
+	top:27px; right:10px;   /*上边27px，右边10px*/
+	font-size:0;    /*字体大小为0*/
+	line-height:0;} /*行高为0*/
+.box-content { 
+	padding:5px;   /*设置内边距大小为5px*/
+}
+a.bul { 
+	background:url(../images/bul.gif) no-repeat 0 center;  /*设置背景图片，不平铺*/
+	padding-left:10px;   /*设置内边距左边大小为10px*/
+}
+
+#slider { 
+	height:252px;      /*高为252px*/
+	position:relative;  /*生成相对定位*/
+	overflow:hidden;    /*定义内容会被修剪，并且其余内容是不可见的*/   
+}
+#slider-holder { 
+	width:720px;    /*宽为720px*/
+	height:252px;    /*高为252px*/
+	position:relative;   /*生成相对定位*/
+}
+#slider-holder .jcarousel-clip{ 
+	width:720px;     /*宽为720px*/
+	height:252px;    /*高为252px*/
+	position:relative; /*生成相对定位*/
+}
+#slider-holder ul{ 
+	width:720px;     /*宽为720px*/
+	height:252px;    /*高为252px*/
+	position:relative; /*生成相对定位*/
+	list-style-type: none;   /*列表样式无标记*/
+}
+#slider-holder ul li{ 
+	width:720px;     /*宽为720px*/
+	height:252px;    /*高为252px*/
+	position:relative;   /*生成相对定位*/
+	float:left;     /*往左浮动*/
+}
+#slider-nav { 
+	position:absolute;    /*生成绝对定位*/
+	top:231px;            /*上边231px*/
+	left:644px;           /*左边644px*/
+	z-index:2;            /**/
+}
+#slider-nav a{ 
+	font-size:0;       /*字体大小为0*/
+	line-height:0;     /*行高为0*/
+	text-indent: -4000px;  /*文本块中首行文本缩进-4000px*/ 
+	width:10px;     /*宽为10px*/
+	height:10px;    /*高为10px*/
+	border:solid 1px #8b0000;   /*设置边框为实线，1px，边框颜色*/
+	background:#8b0000;     /*背景颜色*/
+	float:left;          /*往左浮*/
+	margin-right:5px;    /*设置右外边距为5px*/
+}/*设置text-indent负值是使得页面中的文字不被显示*/
+#slider-nav a:hover,
+#slider-nav a.active { 
+	background:#fff;     /*设置背景色*/
+}
+.products {}      /*产品按照无序列表的方式排列*/
+.products ul{ 
+	list-style-type: none;  /*设置列表无标记*/
+}
+.products ul li{ 
+	position:relative; /*生成相对定位*/
+	padding:1px;       /*设置内边距大小为1px*/
+	border:solid 1px #dedede;   /*设置实线边框，1px，边框颜色*/
+	float:left;   /*往左浮动*/
+	width:231px;  /*宽为231px*/
+	margin-right:9px; /*设置右外边距为9px*/
+	height:383px;    /*设置高为383px*/
+	overflow:hidden;  /*设置内容会被修剪，并且其余内容是不可见的*/
+}
+.products ul li.last{ 
+	margin-right:0;    /*设置右外边距为0*/ 
+}   /*设置无序列表中最后一项的右内边距*/
+
+.search label { 
+	display:block;    /*转换为块级元素*/
+	padding-bottom:3px;   /*设置内边距下大小为3px*/
+}
+.search .field { 
+	display:block;   /*转换为块级元素*/ 
+	margin-bottom:10px;  /*设置下外边距为10px*/
+}
+.search .inline-field label { 
+	display:inline;    /*转换为行内元素*/
+	padding:0;         /*设置填充大小为0*/
+}
+.search .inline-field .field { 
+	display:inline;    /*转换为行内元素*/ 
+	margin:0;          /*设置外边距为0*/
+}
+.search input.field { 
+	width:206px;      /*设置宽为206px*/ 
+}
+.search select.field { 
+	width:212px;      /*设置宽为212px*/ 
+}
+.search select.small-field { 
+	width:50px;       /*设置宽为50px*/ 
+}
+.search-submit { 
+	width:70px;       /*设置宽为70px*/
+	background:#FFCCCC;  /*设置背景颜色*/
+	border:0;            /*设置边框为0*/
+	color:#000000;       /*字体颜色*/
+	height:27px;         /*高为27px*/
+	display:block;       /*转换为块级元素*/
+	line-height:26px;     /*行高为26px*/
+	margin:12px 0 10px 0;   /*设置上外边距为12px，左右0px，下10px*/
+}
+.categories ul { 
+	list-style-type: none;   /*设置列表样式为无*/ 
+	font-size:13px;          /*设置字体大小为13px*/
+}   /*产品分类使用无序列表*/
+.categories ul li{ 
+	border-bottom:dashed 1px #ccc;  /*设置底部虚线边框样式，1px，边框颜色 */
+	padding:5px 0;         /*设置上下内边距大小为5px，左右内边距大小为0px*/
+}
+.categories ul li.last{ 
+	border-bottom:0;      /*设置底部边框为0*/
+	padding-bottom:0;    /*设置底部内边距大小为0*/
+}
+.categories ul li a{ 
+	color:#5f5f5f;       /*字体颜色*/
+	text-decoration: none;   /*定义标准文本*/
+	background:url(../images/cat.gif) no-repeat 0 4px;  /*背景图片，不平铺，上下为0，左右4px*/
+	padding-left:17px;       /*设置左部内边距大小为17px*/
+}
+.categories ul li a:hover{ 
+	color:#8b0000;     /*设置颜色*/
+}
+.more-products { 
+	border:solid 1px #dedede;   /*设置边框为实线，1px，边框颜色*/
+	position:relative;    /*生成相对定位*/
+	height:114px;         /*高为114px*/
+	overflow:hidden;      /*设置内容会被修剪，并且其余内容是不可见的*/
+}
+.more-products ul{ 
+	list-style-type: none;   /*定义列表样式为无*/
+	height:94px;        /*高为94px*/
+	position:relative;  /*生成相对定位*/
+	width:805px;       /*宽为805*/
+}  
+.more-products ul li{ 
+	float:left;     /*往左浮动*/
+	width:94px;     /*宽为94px*/
+	height:94px;    /*高为94px*/
+	border-right:dashed 1px #ccc;  /*定义右边边框为虚线，1px，边框颜色*/
+	padding:0 10px;   /*定义上下内边距大小为0，左右内边距大小为10px*/
+}
+.more-products ul li.last{ 
+	border-right:0;      /*定义右边边框为0*/ 
+}
+.more-products-holder { 
+	width:804px;   /*设置宽为804px*/ 
+	height:94px;   /*设置高为94px*/
+	position:relative;  /*生成相对定位*/
+	overflow:hidden;   /*设置内容会被修剪，并且其余内容是不可见的*/
+	top:10px;     /*往上10px*/
+	left:70px;    /*往左70px*/
+}
+.more-products-holder .jcarousel-clip{ 
+	width:804px;   /*设置宽为804px*/
+	height:94px;   /*设置高为94px*/
+	position:relative;  /*生成相对定位*/
+	overflow:hidden;   /*设置内容会被修剪，并且其余内容是不可见的*/
+}
+.more-nav { 
+	font-size:0;   /*字体大小为0*/ 
+	line-height:0;  /*行高为0*/
+}
+.more-nav a{ 
+	position:absolute;  /*生成绝对定位*/
+	top:40px;     /*往上40px*/
+	left:0;       /*往左0*/
+	width:30px;   /*宽为30px*/
+	height:32px;  /*高为32px*/
+	text-indent: -4000px;    /*文本块中首行文本缩进-4000px*/
+	z-index:3;
+}/*设置text-indent负值是使得页面中的文字不被显示*/
+.more-nav a.next{ 
+	background:url(../images/next.gif);   /*设置图片*/
+	left:910px;                  /*往左910px*/
+}
+.more-nav a.prev{       
+	background:url(../images/prev.gif);    /*设置图片*/
+	left:20px;                   /*往左20px*/
+}
+.cols { 
+	padding:15px 0;          /*设置上下内边距大小为15px，左右为0*/ 
+}
+.col { 
+	float:left;            /*往左浮动*/
+	display:inline;        /*转换为行内元素*/
+	width:217px;           /*宽为217px*/
+	margin-right:30px;     /*设置右外边距为30px*/
+}/*文本中的每一块都向左浮动*/
+.col-last { 
+	margin-right:0;      /*设置右外边距为0*/
+}
+h3.ico { 
+	background-repeat:no-repeat;   /*设置背景图像将仅显示一次*/
+	background-position:0 2px;     /*设置背景图片上下内边距大小为0，左右内边距大小为2px*/
+	padding:6px 0 8px 30px;       /*设置上内边距大小为6px，右内边距大小为0，下内边距大小为8px，左内边距大小为30px*/
+}
+h3.ico1 { background-image:url(../images/ico1.gif);}
+h3.ico2 { background-image:url(../images/ico2.gif);}
+h3.ico3 { background-image:url(../images/ico3.gif);}
+h3.ico4 { background-image:url(../images/ico4.gif);}
+#footer { 
+	height:51px;   /*高为51px*/
+	background:#ebebeb;   /*设置背景颜色*/
+	white-space:nowrap;   /*设置空白会被浏览器忽略*/
+	line-height:50px;    /*设置行高为50px*/
+	padding:0 15px;     /*设置上下内边距大小为0px，左右内边距大小为15px*/
+	color:#7b7b7b;      /*设置颜色*/
+	margin-top:10px;    /*设置上外边距为10px*/
+}
+#footer a{ 
+	color:#7b7b7b;     /*设置颜色*/
+	text-decoration: none; /*设置定义标准文本*/
+}
+#footer a:hover{ 
+	color:#000;     /*设置颜色*/
+}
+#footer span{ 
+	padding:0 2px;  /*设置上下内边距为0，左右内边距大小为2px*/
+}
