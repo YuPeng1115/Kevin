@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>百度跨域搜索</title>
+  <style type="text/css" media="screen">
+      *{
+      	margin: 0;
+      	padding: 0;
+      }
+      ul{
+      	list-style-type: none;
+      }
+      img,input{
+      	display: block;
+      	margin: auto;
+      }
+      #logo{
+      	margin-top: 50px;
+      }
+      #text{
+      	width: 600px;
+      	height: 40px;
+      }
+      #menu{
+      	display: none;
+      	width: 602px;
+      	height: ;/*高度自适应的，不确定会有几个li*/
+      	border: 1px solid #666;
+      	margin: 0 auto;
+      	border-top: none;
+      }
+      #menu li{
+      	line-height: 30px;
+      }
+      #menu li:hover{
+      	background: #d4d4d4;
+      }
+  </style>
+ </head>
+ <body>
+ 	<img src="./images/bd_logo1.png" width="260" id="logo" alt="">
+ 	<input type="text" id="text">
+ 	<ul id="menu">
+ 		<!-- li的个数和内容 而是根据用户输入关键字的情况 动态的改变-->
+ 		<!--<li></li>-->
+ 	</ul>
+ 	<script>
+ 		var oText = document.getElementById("text");
+
+ 		oText.onkeyup = function() {
+
+ 			var val = this.value;//获取输入的文本框内容;
+
+ 			var oScript = document.createElement("script");
+ 			oScript.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+ val +"&cb=Kevin";
+ 			document.body.appendChild(oScript);
+ 		}
+
+ 		var oMenu = document.getElementById("menu")
+ 		function Kevin(arg) {
+ 			oMenu.innerHTML = "";//清除原始的所有数据
+ 			var data = arg.s;//获取关键词数据
+ 			//console.log(data);
+ 			if (data.length == 0)//如果没有搜索关键词
+ 			{
+ 				oMenu.style.display = "none";
+ 				return;//跳出函数
+ 			}
+ 			oMenu.style.display = "block";
+ 			data.forEach(function(el){
+ 				var oLi = document.createElement("li");
+ 				oLi.innerText = el;//在li元素里面添加搜索的关键词
+ 			    oMenu.appendChild(oLi);
+ 			    oLi.onclick = function() {
+ 			    	window.location.href = "https:www.baidu.com/s?wd=" + el;
+ 			    }
+ 			});//遍历数组
+ 		}
+ 	</script>
+ </body>
+</html>
