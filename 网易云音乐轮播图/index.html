@@ -148,6 +148,23 @@
 				prePic();
 			}
 		}
+		
+		//定时器自动轮播
+		function auto(){
+			setInterval(function() {//向下翻页
+			        nameList.unshift(nameList[5]);//把最后一个复制并塞到第一个位置
+			        nameList.pop();//把最后一个给删除掉
+			for(var i=0; i<6; i = i + 1) {
+				aLi[i].setAttribute("class", nameList[i]);//重新
+			}
+			index = index + 1;//让下一个按钮的颜色 发生变化
+			if(index > 5) {
+				index = 0;
+			}
+			setLineColor();//执行
+		        },3000);
+		}
+		auto();//自动执行函数
 	</script>
  </body>
 </html>
