@@ -29,7 +29,7 @@ ul{
     right: 140px;
     width: 30px;
     height: 29px;
-    top: 5px;
+    top: -2px;
 	background: url("../images/icon_bg.png") no-repeat;
 }
 .header .tel span{
@@ -481,8 +481,8 @@ ul{
 	width:50px;
 	height:50px;
 	position: absolute;
-	left: 20px;
-    top: 85px;
+	left: 100px;
+    top: 87px;
 	background: url("../images/tel.png") no-repeat center;
 }
 .footer .container .info .tel{
