@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>侧边下拉导航栏</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		height: 100%;
+	}
+	.wrap{
+		height: 100%;
+		width: 260px;
+		background-color: #363a45;
+	}
+	.head{
+		width: 100%;
+		height: 60px;
+		background-color: #44495a;
+		font-size: 20px;
+		color: #fff;
+		line-height: 60px;
+		text-align: center;
+	}
+	.nav{
+		width: 250px;
+		margin: 10px 5px;
+	}
+	.nav-list{
+		margin-bottom: 5px;
+	}
+	.nav-list h2{
+		position: relative;
+		padding: 15px 0;
+		background-color: #3889d4;
+		text-align: center;
+		color: #fff;
+		font-size: 15px;
+		transition: 1s;
+	}
+	.nav-list h2.on{
+		background-color: #393c4a;
+	}
+	.nav-list i{
+		position: absolute;
+		right: 10px;
+		top: 16px;
+		border: 8px solid transparent;
+		border-left-color: #fff;
+		transform: rotate(0deg);/*CSS3变换属性 旋转*/
+		transform-origin: 1px 7px; /*CSS3变换基点*/
+		transition: 1s;
+	}
+	.nav-list i.on{
+		transform: rotate(90deg);
+	}
+	.hide{
+		overflow: hidden;
+		height: 0;
+		transition: 1s;
+	}
+	.hide h5{
+		padding: 10px 0;
+		border-bottom: 1px solid #42495d;
+		background-color: #282c3a;
+		text-align: center;
+		color: #fff;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">国内各地景点</div>
+		<div class="nav">
+			<ul>
+				<li class="nav-list">
+					<h2>
+					    北京景点
+					    <i></i>
+				    </h2>
+					<div class="hide">
+						<h5>故宫</h5>
+						<h5>十三陵</h5>
+						<h5>圆明园</h5>
+						<h5>长城</h5>
+						<h5>天安门</h5>
+						<h5>天坛公园</h5>
+					</div>
+				</li>
+				<li class="nav-list">
+					<h2>
+					    南京景点
+					    <i></i>
+					</h2>
+					<div class="hide">
+						<h5>故宫</h5>
+						<h5>十三陵</h5>
+						<h5>圆明园</h5>
+						<h5>长城</h5>
+						<h5>天安门</h5>
+						<h5>天坛公园</h5>
+					</div>
+				</li>
+				<li class="nav-list">
+					<h2>
+					    上海景点
+					    <i></i>
+					</h2>
+					<div class="hide">
+						<h5>故宫</h5>
+						<h5>十三陵</h5>
+						<h5>圆明园</h5>
+						<h5>长城</h5>
+						<h5>天安门</h5>
+						<h5>天坛公园</h5>
+					</div>
+				</li>
+				<li class="nav-list">
+					<h2>
+					    深圳景点
+					    <i></i>
+					</h2>
+					<div class="hide">
+						<h5>故宫</h5>
+						<h5>十三陵</h5>
+						<h5>圆明园</h5>
+						<h5>长城</h5>
+						<h5>天安门</h5>
+						<h5>天坛公园</h5>
+					</div>
+				</li>
+				<li class="nav-list">
+					<h2>
+					    广州景点
+					    <i></i>
+					</h2>
+					<div class="hide">
+						<h5>故宫</h5>
+						<h5>十三陵</h5>
+						<h5>圆明园</h5>
+						<h5>长城</h5>
+						<h5>天安门</h5>
+						<h5>天坛公园</h5>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		/*
+		   思路：
+		        1.点击鼠标显示隐藏元素内容{
+	                一 JS如何获取元素   -->document.querySelectorAll
+	                二 JS如何鼠标点击事件
+	                三 JS如何设置CSS属性
+		        }
+
+		        2.点击当前清除上次次的样式{
+	                一 清除上一次的样式
+	                二 设置当前样式
+		        }
+		        3.点击自己收回{
+	                一 定义一个开关
+
+		        }
+		 */
+		
+		var aList = document.querySelectorAll('.nav-list h2');
+		var aHide = document.querySelectorAll('.hide');
+		var aIcon = document.querySelectorAll('.nav-list i');
+		var lastIndex = 0;
+
+		for(var i = 0; i < aList.length; i++) {
+			aList[i].index = i;//自定义属性保存下标
+			aList[i].isClick = false;//定义一个开关  判断自己是否被点击
+
+			aList[i].onclick = function() {
+				//清除上一次的样式
+				aHide[lastIndex].style.height = '0';
+				aList[lastIndex].className = '';
+				aIcon[lastIndex].className = '';
+
+				if(this.isClick) {
+				//     aHide[this.index].style.height = '0';
+				//    aList[this.index].className = '';
+				//    aIcon[this.index].className = '';
+				    this.isClick = false;
+				}else{
+				    //设置当前样式
+				    aHide[this.index].style.height = '245px';
+				    aList[this.index].className = 'on';
+				    aIcon[this.index].className = 'on';
+				    aList[lastIndex].isClick = false;//清除上一次状态
+				    this.isClick = true;//我现在被点击了
+				    lastIndex = this.index;//保存上一次的下标
+				}		
+			}
+		}
+		
+	</script>
+</body>
+</html>
